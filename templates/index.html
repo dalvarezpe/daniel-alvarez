@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EscalarData | Datos Abiertos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .data-card {
+            transition: transform 0.3s;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .data-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #6e48aa 0%, #9d50bb 100%);
+        }
+        .search-box {
+            border-radius: 50px;
+            border: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .footer-btn {
+            border-radius: 20px;
+            padding: 5px 15px;
+            font-size: 0.8rem;
+        }
+        .navbar-custom {
+            padding: 0.5rem 1rem;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <!-- HEADER -->
+    <header class="hero-gradient text-white">
+        <div class="container">
+            <nav class="navbar navbar-expand navbar-dark navbar-custom">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bold" href="#">📊 EscalarData</a>
+                    <div class="navbar-nav">
+                        <a class="nav-link active" href="#">Inicio</a>
+                        <a class="nav-link" href="#">Indicadores</a>
+                        <a class="nav-link" href="#">Dashboards</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- BUSCADOR PRINCIPAL -->
+    <section class="py-4">
+        <div class="container">
+            <div class="bg-white p-3 rounded-4 shadow-sm">
+                <h2 class="h5 text-center mb-3">🔍 Buscador de Datos</h2>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control search-box py-2" placeholder="Ej: PIB, población, litio...">
+                    <button class="btn btn-primary rounded-pill px-4" type="button">Buscar</button>
+                </div>
+                <div class="text-center">
+                    <small class="text-muted">Prueba con: <a href="#">exportaciones</a>, <a href="#">turismo</a></small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DASHBOARDS DESTACADOS -->
+    <section class="py-3">
+        <div class="container">
+            <h2 class="h5 mb-3">📈 Dashboards Populares</h2>
+            <div class="row g-3">
+                <!-- Tarjeta 1 - Crecimiento Económico -->
+                <div class="col-6">
+                    <div class="data-card bg-white p-3 h-100 shadow-sm">
+                        <div class="bg-primary bg-opacity-10 p-2 rounded mb-2" style="height: 100px;">
+                            <div class="w-100 h-100 d-flex align-items-center justify-content-center text-primary">
+                                [Gráfico PIB]
+                            </div>
+                        </div>
+                        <h3 class="h6 mb-1">Crecimiento Económico</h3>
+                        <p class="small text-muted mb-0">Por departamento (2023)</p>
+                    </div>
+                </div>
+                
+                <!-- Tarjeta 2 - Producción Minera -->
+                <div class="col-6">
+                    <div class="data-card bg-white p-3 h-100 shadow-sm">
+                        <div class="bg-success bg-opacity-10 p-2 rounded mb-2" style="height: 100px;">
+                            <div class="w-100 h-100 d-flex align-items-center justify-content-center text-success">
+                                [Mapa Minería]
+                            </div>
+                        </div>
+                        <h3 class="h6 mb-1">Producción Minera</h3>
+                        <p class="small text-muted mb-0">Litio, estaño, plata</p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3 - Inflación (Nueva) -->
+                <div class="col-6">
+                    <div class="data-card bg-white p-3 h-100 shadow-sm">
+                        <div class="bg-danger bg-opacity-10 p-2 rounded mb-2" style="height: 100px;">
+                            <div class="w-100 h-100 d-flex align-items-center justify-content-center text-danger">
+                                [Gráfico IPC]
+                            </div>
+                        </div>
+                        <h3 class="h6 mb-1">Inflación Anual</h3>
+                        <p class="small text-muted mb-0">Variación porcentual</p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 4 - Exportaciones (Nueva) -->
+                <div class="col-6">
+                    <div class="data-card bg-white p-3 h-100 shadow-sm">
+                        <div class="bg-warning bg-opacity-10 p-2 rounded mb-2" style="height: 100px;">
+                            <div class="w-100 h-100 d-flex align-items-center justify-content-center text-warning">
+                                [Gráfico Barras]
+                            </div>
+                        </div>
+                        <h3 class="h6 mb-1">Exportaciones</h3>
+                        <p class="small text-muted mb-0">Por producto y destino</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DATOS RÁPIDOS -->
+    <section class="py-3">
+        <div class="container">
+            <h2 class="h5 mb-3">⚡ Datos Rápidos</h2>
+            <div class="row g-2">
+                <div class="col-6">
+                    <div class="bg-white p-3 rounded-3 shadow-sm">
+                        <div class="d-flex align-items-center">
+                            <span class="bg-info bg-opacity-10 p-2 rounded-circle me-2">👥</span>
+                            <div>
+                                <p class="small mb-0">Población Total</p>
+                                <p class="fw-bold mb-0">12.3M</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="bg-white p-3 rounded-3 shadow-sm">
+                        <div class="d-flex align-items-center">
+                            <span class="bg-warning bg-opacity-10 p-2 rounded-circle me-2">💰</span>
+                            <div>
+                                <p class="small mb-0">PIB Per Cápita</p>
+                                <p class="fw-bold mb-0">$3,450</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white py-4 mt-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="small mb-0">© 2025 Copyright: <strong>Daniel Alvarez Perez</strong></p>
+                </div>
+                <div class="col-md-6 text-md-end mt-2 mt-md-0">
+                    <a href="#" class="btn btn-outline-light footer-btn me-2">For Recruiters</a>
+                    <a href="#" class="btn btn-outline-light footer-btn">API Docs</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
