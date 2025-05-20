@@ -1,0 +1,13 @@
+# Entorno virtual y archivos de Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos de entorno y configuración local
+.env
+.env.local
+
+# VS Code
+.vscode/
